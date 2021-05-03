@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* General */
+body {
+  background-color: #191D38;
+}
+
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #E6E7EA;
+}
+
+/* Navbar */
+.brand{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand h1{
+  margin-left: 10px;
+}
+
+.navbar{
+  padding: 20px;
+}
+
+.navbar a{
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+/* InfoBar */
+.info-bar{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info-bar a{
+  text-decoration: none;
+}
+
+.info-bar-element:hover{
+  color: #b3b4b6;
+}
+
+.info-bar-element{
+  text-align: center;
+  width: 230px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #242A49;
+  border-radius: 20px;
+  box-shadow: #242A49 0px 30px 90px;
+}
+
+/* Coin Overview */
+.coin-overview{
+  padding: 20px;
+}
+
+
+/* Top7Coins24h */
+.top7-coins-24h-name{
+  text-align: center;
+}
+
+.coins{
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #242A49;
+  border-radius: 20px;
+  box-shadow: #242A49 0px 30px 90px;
+}
+.top7-coins-24h-element{
+  margin: 5px 5px 5px 5px;
+}
+
+/* Advertisement */
+.advertisement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Footer */
+.footer{
+  text-align: center;
+}
+
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
