@@ -1,5 +1,5 @@
-import CoinOverview from './CoinOverview'
-import Top7Coins24h from './Top7Coins24h'
+import CoinOverview from '../CoinOverview'
+import Top7Coins24h from '../Top7Coins24h'
 
 const HomePage = () => {
     return (

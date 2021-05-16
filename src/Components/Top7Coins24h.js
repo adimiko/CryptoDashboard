@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import useFetch from './useFetch';
+import { Link } from 'react-router-dom';
 
 
 const Top7Coins24h = () => {
@@ -23,11 +24,13 @@ const Top7Coins24h = () => {
                 {!isPending &&
                     <div className="coins">
                         {data.coins.sort((a, b) => a.item.score - b.item.score).map((coin) => (
+                            <Link expect to={`/coins/${coin.item.id}`}>
                             <div key={coin.item.id} className="top7-coins-24h-element">
                                     <b>
                                         {coin.item.score + 1}. <img src={coin.item.thumb} alt={coin.item.id} width="25" height="25"/> {coin.item.symbol.toUpperCase()}
                                     </b>
                             </div>
+                            </Link>
                         ))}
                     </div>}
         </div>

@@ -102,3 +102,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.altseason-page-container{
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

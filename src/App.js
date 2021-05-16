@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import InfoBar from './Components/InfoBar';
 import Navbar from './Components/Navbar';
 import CoinOverview from './Components/CoinOverview';
-import FearAndGreedIndexPage from './Components/FearAndGreedIndexPage'
+import FearAndGreedIndexPage from './Components/Pages/FearAndGreedIndexPage'
 import Advertisement from './Components/Advertisement';
 import Top7Coins24h from './Components/Top7Coins24h';
-import HomePage from './Components/HomePage';
+import HomePage from './Components/Pages/HomePage';
 import Footer from './Components/Footer';
-import NotFoundPage from './Components/NotFoundPage';
+import NotFoundPage from './Components/Pages/NotFoundPage';
+import CoinPage from './Components/Pages/CoinPage';
+import AltseasonPage from './Components/Pages/AltseasonPage';
+
 
 function App() {
   return (
@@ -32,6 +35,12 @@ function App() {
                   </Route>
                   <Route exact path="/fear-and-greed-index">
                     <FearAndGreedIndexPage />
+                  </Route>
+                  <Route exact path="/coins/:id">
+                    <CoinPage />
+                  </Route>
+                  <Route exact path="/altseason">
+                    <AltseasonPage />
                   </Route>
                   <Route component={NotFoundPage} />
                 </Switch>
