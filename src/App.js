@@ -11,7 +11,7 @@ import Footer from './Components/Footer';
 import NotFoundPage from './Components/Pages/NotFoundPage';
 import CoinPage from './Components/Pages/CoinPage';
 import AltseasonPage from './Components/Pages/AltseasonPage';
-
+import DisclaimerPage  from './Components/Pages/DisclaimerPage';
 
 function App() {
   return (
@@ -41,6 +41,9 @@ function App() {
                   </Route>
                   <Route exact path="/altseason">
                     <AltseasonPage />
+                  </Route>
+                  <Route exact path="/disclaimer">
+                    <DisclaimerPage />
                   </Route>
                   <Route component={NotFoundPage} />
                 </Switch>
