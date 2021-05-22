@@ -1,6 +1,6 @@
-import useFetch from '../useFetch';
-import coinsBetterThanBitcoin from '../coinsBetterThanBitcoin';
-import coinsWorseThanBitcoin from '../coinsWorseThanBitcoin';
+import useFetch from '../../hooks/useFetch';
+import coinsBetterThanBitcoin from '../../hooks/coinsBetterThanBitcoin';
+import coinsWorseThanBitcoin from '../../hooks/coinsWorseThanBitcoin';
 
 
 const AltseasonPage = () => {
@@ -22,9 +22,9 @@ const AltseasonPage = () => {
                     ))}
                 </div>
                 <div className="altseason-bitcoin">
-                        <img src={coins.filter(coin => coin.id == "bitcoin")[0].image} width="25" height="25"/>
-                        {coins.filter(coin => coin.id == "bitcoin")[0].name}
-                        {coins.filter(coin => coin.id == "bitcoin")[0].price_change_percentage_30d_in_currency.toFixed(2)}%
+                        <img src={coins.filter(coin => coin.id === "bitcoin")[0].image} alt="bitcoin" width="25" height="25"/>
+                        {coins.filter(coin => coin.id === "bitcoin")[0].name}
+                        {coins.filter(coin => coin.id === "bitcoin")[0].price_change_percentage_30d_in_currency.toFixed(2)}%
                 </div>
                 <div className="worse-better-than-btc">
                     <h2>Coins worse than BTC</h2>

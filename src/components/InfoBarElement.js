@@ -1,5 +1,3 @@
-import { useState } from 'react-dom';
-
 const InfoBarElement = ({name, value }) => {
 
     return (

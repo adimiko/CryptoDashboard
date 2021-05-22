@@ -1,17 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import InfoBar from './Components/InfoBar';
-import Navbar from './Components/Navbar';
-import CoinOverview from './Components/CoinOverview';
-import FearAndGreedIndexPage from './Components/Pages/FearAndGreedIndexPage'
-import Advertisement from './Components/Advertisement';
-import Top7Coins24h from './Components/Top7Coins24h';
-import HomePage from './Components/Pages/HomePage';
-import Footer from './Components/Footer';
-import NotFoundPage from './Components/Pages/NotFoundPage';
-import CoinPage from './Components/Pages/CoinPage';
-import AltseasonPage from './Components/Pages/AltseasonPage';
-import DisclaimerPage  from './Components/Pages/DisclaimerPage';
+import InfoBar from './components/InfoBar';
+import Navbar from './components/Navbar';
+import FearAndGreedIndexPage from './components/pages/FearAndGreedIndexPage'
+import Advertisement from './components/Advertisement';
+import HomePage from './components/pages/HomePage';
+import Footer from './components/Footer';
+import NotFoundPage from './components/pages/NotFoundPage';
+import CoinPage from './components/pages/CoinPage';
+import AltseasonPage from './components/pages/AltseasonPage';
+import DisclaimerPage  from './components/pages/DisclaimerPage';
 
 function App() {
   return (
@@ -30,21 +28,11 @@ function App() {
             <Row>
               <Col>
                 <Switch>
-                  <Route exact path="/">
-                    <HomePage />
-                  </Route>
-                  <Route exact path="/fear-and-greed-index">
-                    <FearAndGreedIndexPage />
-                  </Route>
-                  <Route exact path="/coins/:id">
-                    <CoinPage />
-                  </Route>
-                  <Route exact path="/altseason">
-                    <AltseasonPage />
-                  </Route>
-                  <Route exact path="/disclaimer">
-                    <DisclaimerPage />
-                  </Route>
+                  <Route exact path="/" component={HomePage} />
+                  <Route exact path="/fear-and-greed-index" component={FearAndGreedIndexPage} />
+                  <Route exact path="/coins/:id" component={CoinPage} />
+                  <Route exact path="/altseason" component={AltseasonPage} />
+                  <Route exact path="/disclaimer" component={DisclaimerPage} />
                   <Route component={NotFoundPage} />
                 </Switch>
               </Col>
@@ -57,7 +45,8 @@ function App() {
             </Row>
         </Container>
       </div>
-    </Router>
+      </Router>
+    
   );
 }
 

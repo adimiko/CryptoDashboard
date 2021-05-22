@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useParams } from "react-router";
-import useFetch from '../useFetch';
+import useFetch from '../../hooks/useFetch';
 
 const CoinPage = () => {
     const { id } = useParams();
@@ -15,7 +15,7 @@ const CoinPage = () => {
             <Content>
                 <TopBar>
                     <NameAndLogo>
-                        <img src={coin.image.small} />
+                        <img src={coin.image.small} alt={coin.id}/>
                         <h2>{coin.name} ({coin.symbol.toUpperCase()})</h2>
                     </NameAndLogo>
                     <Price>

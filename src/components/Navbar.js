@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
